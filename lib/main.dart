@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 125, 183, 58))),
+      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 0, 0))),
       home: const PokemonScreen(),
     );
   }
@@ -70,12 +70,12 @@ class _PokemonScreenState extends State<PokemonScreen> {
 
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(color: Colors.green, width: 2)
+                  borderSide: BorderSide(color: const Color.fromARGB(255, 146, 0, 0), width: 2)
                 ),
 
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(color: Colors.greenAccent, width: 3)
+                  borderSide: BorderSide(color: const Color.fromARGB(255, 122, 11, 11), width: 3)
               ),
             ),
           ),
@@ -85,7 +85,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
             ElevatedButton(
               onPressed: _buscarPokemon,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
+                backgroundColor: const Color.fromARGB(176, 255, 0, 0),
                 shape: CircleBorder(),
                 padding: EdgeInsets.all(20),
                 elevation: 8,
@@ -181,7 +181,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       IconButton(
-                                        icon: Icon(Icons.arrow_back_ios_new, color: puedeIrAtras ? Colors.green : Colors.grey),
+                                        icon: Icon(Icons.arrow_back_ios_new, color: puedeIrAtras ? const Color.fromARGB(255, 255, 0, 0) : Colors.grey),
                                         onPressed: puedeIrAtras 
                                           ? () {
                                             _pageController.previousPage(
@@ -192,7 +192,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
                                           : null,
                                       ),
                                       IconButton(
-                                        icon: Icon(Icons.arrow_forward_ios, color: puedeIrAdelante ? Colors.green : Colors.grey),
+                                        icon: Icon(Icons.arrow_forward_ios, color: puedeIrAdelante ? const Color.fromARGB(255, 255, 0, 0) : Colors.grey),
                                         onPressed: puedeIrAdelante ? 
                                           () {
                                             _pageController.nextPage(
@@ -223,7 +223,7 @@ class _PokemonScreenState extends State<PokemonScreen> {
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,
                                               ),),
-                                              backgroundColor: Colors.green,
+                                              backgroundColor: const Color.fromARGB(255, 155, 0, 0),
                                               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                                               shape: RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.circular(20),
